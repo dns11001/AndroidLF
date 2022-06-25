@@ -1,18 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A3FF7C"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A3FF7C"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/header_calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_calc"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/edit_text_input"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeholder_input"
+            android:layout_below="@+id/header_calculator"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+
+            android:layout_marginTop="100dp"
+            android:importantForAutofill="no" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_one"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_one"
+
+            android:layout_marginTop="100dp"
+            android:layout_below="@id/edit_text_input"
+            android:layout_toStartOf="@+id/button_two"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_two"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_two"
+
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edit_text_input"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_three"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_three"
+
+            android:layout_marginTop="100dp"
+            android:layout_below="@id/edit_text_input"
+            android:layout_toEndOf="@+id/button_two"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_four"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_four"
+
+            android:layout_below="@+id/button_two"
+            android:layout_toStartOf="@+id/button_five"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_five"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_five"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_two"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_six"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_six"
+
+            android:layout_below="@+id/button_two"
+            android:layout_toEndOf="@+id/button_five"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_seven"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_seven"
+
+            android:layout_below="@+id/button_five"
+            android:layout_toStartOf="@+id/button_five"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_eight"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_eight"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_five"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_nine"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_nine"
+
+            android:layout_below="@+id/button_five"
+            android:layout_toEndOf="@+id/button_eight"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_point"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_point"
+
+            android:layout_below="@+id/button_seven"
+            android:layout_toStartOf="@+id/button_zero"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_zero"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_zero"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_eight"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_delete"
+            android:layout_width="@dimen/small_button_width"
+            android:layout_height="@dimen/small_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_delete"
+
+            android:layout_below="@+id/button_nine"
+            android:layout_toEndOf="@+id/button_zero"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_plus"
+            android:layout_width="@dimen/operation_button_width"
+            android:layout_height="@dimen/operation_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_plus"
+
+            android:layout_marginTop="100dp"
+            android:layout_below="@+id/edit_text_input"
+            android:layout_toStartOf="@+id/button_one"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_multi"
+            android:layout_width="@dimen/operation_button_width"
+            android:layout_height="@dimen/operation_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_multi"
+
+            android:layout_below="@+id/button_plus"
+            android:layout_toStartOf="@+id/button_one"/>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_minus"
+            android:layout_width="@dimen/operation_button_width"
+            android:layout_height="@dimen/operation_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_minus"
+
+            android:layout_marginTop="100dp"
+            android:layout_below="@+id/edit_text_input"
+            android:layout_toEndOf="@+id/button_three"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_division"
+            android:layout_width="@dimen/operation_button_width"
+            android:layout_height="@dimen/operation_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_division"
+
+            android:layout_below="@+id/button_minus"
+            android:layout_toEndOf="@+id/button_nine"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_result"
+            android:layout_width="@dimen/long_button_width"
+            android:layout_height="@dimen/long_button_height"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_result"
+
+            android:layout_below="@+id/button_zero"
+            android:layout_alignStart="@+id/button_multi"/>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
