@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_button_width">75sp</dimen>
+    <dimen name="small_button_height">75dp</dimen>
+    <dimen name="operation_button_width">75sp</dimen>
+    <dimen name="operation_button_height">150dp</dimen>
+    <dimen name="long_button_width">375sp</dimen>
+    <dimen name="long_button_height">75dp</dimen>
+</resources>
